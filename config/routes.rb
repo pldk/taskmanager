@@ -1,4 +1,30 @@
 Rails.application.routes.draw do
+  root 'tasks#index'
+  get 'tasks' => 'tasks#index'
+
+  get 'tasks/new' => 'tasks#new', as: :new
+
+  get 'tasks/:id' => 'tasks#show', as: :task
+
+
+
+  post 'tasks' => 'tasks#create', as: :create
+
+  get 'tasks/:id/edit' => 'tasks#edit', as: :edit
+
+  patch 'tasks/:id' => 'tasks#update', as: :update
+
+  delete 'tasks/:id' => 'tasks#destroy', as: :delete
+
+
+  #   GET '/tasks': get all your tasks.
+  # GET '/tasks/:id': get a precise task, e.g GET '/tasks/33' get task with id=3
+  # GET '/tasks/new': get the form to create a new task
+  # POST '/tasks': post a new task
+  # GET '/tasks/:id/edit': get the form to edit an existing task
+  # PATCH '/tasks/:id': update an existing task
+  # DELETE '/tasks/:id': delete an existing task
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

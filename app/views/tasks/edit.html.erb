@@ -1,0 +1,15 @@
+<h1>EDIT</h1>
+<h4>
+<%= form_for(@task) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+  <br>
+  <%= f.label :done %>
+  <%= f.check_box :done %>
+  <br>
+  <%= f.submit %>
+<% end %>
+</h4>

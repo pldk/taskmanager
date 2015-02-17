@@ -1,0 +1,7 @@
+<h1>SHOW</h1>
+<h2><%= link_to @task.name, edit_path(@task) %></h2>
+<p><%= @task.content %></p>
+
+
+<%= link_to 'destroy', delete_path(@task), method: :delete %>
+
